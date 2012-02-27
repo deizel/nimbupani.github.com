@@ -4,7 +4,7 @@
   <title><![CDATA[Web Development | Divya Manian]]></title>
   <link href="http://nimbupani.github.com/categories/web-development/atom.xml" rel="self"/>
   <link href="http://nimbupani.github.com/"/>
-  <updated>2012-02-22T17:31:44-08:00</updated>
+  <updated>2012-02-26T17:29:05-08:00</updated>
   <id>http://nimbupani.github.com/</id>
   <author>
     <name><![CDATA[Divya Manian]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Html5please API]]></title>
+    <link href="http://nimbupani.github.com/html5please-api.html"/>
+    <updated>2012-02-26T17:24:00-08:00</updated>
+    <id>http://nimbupani.github.com/html5please-api</id>
+    <content type="html"><![CDATA[<p><a href="http://api.html5please.com"><img src="http://cache.gyazo.com/88b8a0680005a6f09584510034f2b847.png" alt="" /></a></p>
+
+<p>Some time ago, I noticed that many <a href="http://static.echonest.com/MidemMusicMachine/index.html">webGL demos</a> had a nice browser prompt:</p>
+
+<p><img src="http://cache.gyazo.com/57a9e37c0c425c458978f0ce335bd18f.png" alt="" /></p>
+
+<p>If your browser did not support webGL, you got a little link to <a href="http://get.webgl.org">get.webgl.org</a> which uses UA detection to tell you what browser to view webGL with. If there was a newer version of your browser that supported webGL, then it would link to that browser. If not, it would link to all the other browsers that support webGL.</p>
+
+<p><img src="http://cache.gyazo.com/f0a80983ca4e1a8e1cebb72a66077b33.png" alt="getWebGL messaging" /></p>
+
+<p>Instead of forcing people to choose a browser arbitrarily due to a developer's whims and fancies, it provides you with an optimal recommendation based on your (viewer's) defaults.</p>
+
+<p>I wanted to see if we could do so with all the other HTML5 features. This way, there would be less of "download webkit browsers now" and more smart browser recommendations based on actual feature support.</p>
+
+<p>You also won't have to see antiquated messaging like "Download Opera 9.5" or "Download Chrome 8", but get an up-to-date browser support information depending on the features that are requested:</p>
+
+<p><img src="http://cache.gyazo.com/f49245b9418ab7069cf754436b079ea3.png" alt="Screenshot of browser support message" /></p>
+
+<p>If a newer version of your browser supports the required features, it would ask you to view the page in that browser and not in random other browsers:</p>
+
+<p><img src="http://cache.gyazo.com/45d07becc1f74d9c9544a120821652cd.png" alt="Screenshow of newer browser message" /></p>
+
+<p>I broached the idea <a href="https://github.com/paulirish/lazyweb-requests/issues/39">here</a> and then less than a month ago, <a href="http://twitter.com/jon_neal">Jonathan Neal</a> produced a full working implementation of how such a service would look like. I worked with Jon, <a href="http://twitter.com/fyrd">Alexis Deveria</a>, <a href="http://twitter.com/paul_irish">Paul Irish</a>, <a href="http://twitter.com/drublic">Hans Christian Reinl</a>, <a href="http://twitter.com/aaronlayton">Aaron Layton</a> and <a href="https://github.com/h5bp/html5please-api/contributors">many more</a> to create what is now <a href="http://api.html5please.com">HTML5Please API</a>.</p>
+
+<p>In brief, this service looks up the data used to render <a href="http://caniuse.com">When can I use</a> tables and match it to the user's UA. Depending on the match, and the required features, it would either tell the user that they have a browser that is missing critical features required on the page or it would get out of the way and not render anything.</p>
+
+<p>Here is how it looks like on a browser that supports all the required features:
+<img src="http://h5bp.github.com/html5please-api/site/with-support.png" alt="A page on a browser supporting Drag and Drop" /></p>
+
+<p>Here is how it looks like when a browser does not:
+<img src="http://h5bp.github.com/html5please-api/site/without-support.png" alt="A page on a browser that does not support Drag and Drop" /></p>
+
+<p>Even if the service fails to return anything (say network failure), there is no terrible disruption, the user can use the site as it is.</p>
+
+<p>Ideally, you would want to provide all critical actions on the user's browser based on what is available. If you absolutely must need certain features to enhance the experience, you can use this service to let the user know which browsers would offer that.</p>
+
+<p><a href="http://twitter.com/simurai">Simurai</a> has some creative uses of this service in his projects <a href="http://lab.simurai.com/carveme/">Carveme</a> and <a href="http://lab.simurai.com/flashlight/">Flash Light</a>. What more, this API has even been <a href="https://github.com/gf3/protobot/blob/master/protobot.js#L447">integrated into an IRC bot</a>!</p>
+
+<p>The <a href="https://github.com/h5bp/html5please-api/wiki/">Wiki pages</a> have much more in-depth information on all the possible options you can use with this API.</p>
+
+<p>Let us know your suggestions and bug reports on the <a href="http://github.com/h5bp/html5please-api/issues/">Github Issue Tracker</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[html5please]]></title>
@@ -285,92 +334,6 @@ Properties defined on <code>.region1-1</code> or <code>.region1-2</code> will no
 
 
 <p> <p> We already have parts of <span class="caps">CSSOM</span> implemented in various browsers (Opera 11.5+, <span class="caps">IE10</span> , Chrome, <span class="caps">FF5</span> ) though! </p> <p>Any questions you have that I can ask the Working Group about?</p></p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[This revolution needs new revolutionaries]]></title>
-    <link href="http://nimbupani.github.com/this-revolution-needs-new-revolutionaries.html"/>
-    <updated>2011-05-21T00:00:00-07:00</updated>
-    <id>http://nimbupani.github.com/this-revolution-needs-new-revolutionaries</id>
-    <content type="html"><![CDATA[<p>In early 2000s, when the web was in its infancy, a great number of committed activists made Open Web Standards possible. They advocated, wrote the specifications, explained them to the masses, and contributed to the revolution of using W3C Specs on the web. I owe each of them my career as a Web Designer/developer.</p>
-
-
-
-
-<p>Now, we are in the middle of another revolution. The web as we know it is changing significantly. The ways of doing, implementing and working with web pages have altered. Designing with the right semantic tags or using floats instead of tables are no longer the simple goals of a good web page. We need the pages to load quickly, use the faster newer CSS selectors and DOM APIs, and better ways to create animations, dynamic images, and dealing with how to design for a variety of devices that now have browsers. </p>
-
-
-
-
-<p>The best way to be a part of the revolution is to BE the revolution, not talk ABOUT the revolution. A lot of recognized individuals seem to be doing the latter. To BE the revolution, you just need to look at what some of the people at the fore-front of it are doing: <a href="http://paulirish.com">Paul Irish</a> and <a href="http://farukat.es/">Faruk Ateş</a> have made the future accessible with <a href="http://modernizr.com">Modernizr</a>. <a href="http://peter.sh/">Peter Beverloo</a> created the <a href="http://peter.sh/category/last-week/">"Last Week in…"</a> series that has been re-adopted by <a href="http://www.w3.org/QA/archive/open_web/">W3C</a> and <a href="http://blog.whatwg.org/category/weekly-review">WHATWG</a> where you can keep up with the pace of creation and implementation of web specifications. <a href="http://www.scottjehl.com/">Scott Jehl</a> created <a href="https://github.com/scottjehl/Respond">Respond.js</a> which lets older browsers understand media queries, <a href="http://www.blog.highub.com/">Shi Chuan</a> made designing for multiple devices easy by exhaustive research for <a href="http://html5boilerplate.com/mobile/">HTML5 Mobile Boilerplate</a>. Jon Neal made practical use of HTML5 elements easy with <a href="http://www.iecss.com/print-protector/">IE Print Protector</a>. <a href="http://leaverou.me/">Lea Verou</a> has been <a href="http://leaverou.me/2010/07/organizing-a-university-course-on-modern-web-development/">teaching web development</a> and is the author of significant articles on web development. <a href="http://www.accessibleculture.org/">Jason Kiss</a> has been documenting how <a href="http://www.accessibleculture.org/research/html5-aria-2011/">HTML5 elements, ARIA work with different Screen readers</a> without much fanfare. <a href="http://nicolasgallagher.com/">Nicolas Gallagher</a>, <a href="http://www.thecssninja.com/">Ryan Seddon</a>, <a href="http://mathiasbynens.be/">Mathias Bynens</a> and several others have been doing similar practical investigations on how to use what’s new and awesome in real life scenarios.</p>
-
-
-<p></p>
-
-<p>But these are not the people who are known revolutionaries. Unfortunately, the people who seem to be recognized for pushing the envelope are people who talk ABOUT the change, those who split hairs on whether to call something "Responsive" or "Adaptive" or speak about HTML5/CSS3 but have very little code to show for their understanding of it. </p>
-
-
-
-
-<p>Now is the time to get developers on board the new rush of web standards, not to promote litigation on the presence or absence of a single HTML attribute, or debate a merits of the name of a technique. What it does is to deflect attention from learning, instead directs developers to spend more time beating about the bush and not be fully engaged in what’s coming.</p>
-
-
-
-
-<p>It is time to move on. I acknowledge all these past trail blazers, but they are not at the forefront today. Following their advocacy does not shed light on all the practical implementations that are possible while exploring new technology. People seem to know - but not use - the latest in web standards, and several are on the fence because they do not know how to work with new standards right now. </p>
-
-
-
-
-<p>It is time for us to get new idols. Here is what my idols do:</p>
-
-
-
-
-<h3>Create</h3>
-
-
-<p>They code. They have demos on their website or on Github.</p>
-
-
-
-
-<p>They write. They write tutorials that are not browser-specific, and link back to specifications, have comments and update their posts with newer/better ideas from within the comments section.</p>
-
-
-
-
-<h3>Research</h3>
-
-
-<p></p>
-
-<p>They research and publish their findings. A lot of recommended practices are dogma and hearsay - creating practical examples to test such assertions and validate them would be cornerstone of their work.</p>
-
-
-
-
-<p>They know what is new. Web standards keep changing. They should know what is new, what is relevant and what shouldn't be promoted. They talk and respond to your queries and are not too busy to find time to write code that works.</p>
-
-
-
-
-<h3>Collaborate</h3>
-
-
-<p>They do not work in isolation, but get people together who can create projects that benefit the web.[Bonus!] They are available on mailing-lists, forums, or IRC channels to help n00bs when they can.</p>
-
-
-
-
-<p>If you think it is hard to find these people, then you are not looking. All the people I mentioned earlier are people worthy of listening to. Look at who else they are talking to, or doing projects with, follow the trail. </p>
-
-
-
-
-<p>The old revolution is dead, long live the revolution.</p>
-
 ]]></content>
   </entry>
   

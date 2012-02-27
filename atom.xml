@@ -4,7 +4,7 @@
   <title><![CDATA[Divya Manian]]></title>
   <link href="http://nimbupani.github.com/atom.xml" rel="self"/>
   <link href="http://nimbupani.github.com/"/>
-  <updated>2012-02-22T17:31:44-08:00</updated>
+  <updated>2012-02-26T17:29:05-08:00</updated>
   <id>http://nimbupani.github.com/</id>
   <author>
     <name><![CDATA[Divya Manian]]></name>
@@ -12,6 +12,55 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Html5please API]]></title>
+    <link href="http://nimbupani.github.com/html5please-api.html"/>
+    <updated>2012-02-26T17:24:00-08:00</updated>
+    <id>http://nimbupani.github.com/html5please-api</id>
+    <content type="html"><![CDATA[<p><a href="http://api.html5please.com"><img src="http://cache.gyazo.com/88b8a0680005a6f09584510034f2b847.png" alt="" /></a></p>
+
+<p>Some time ago, I noticed that many <a href="http://static.echonest.com/MidemMusicMachine/index.html">webGL demos</a> had a nice browser prompt:</p>
+
+<p><img src="http://cache.gyazo.com/57a9e37c0c425c458978f0ce335bd18f.png" alt="" /></p>
+
+<p>If your browser did not support webGL, you got a little link to <a href="http://get.webgl.org">get.webgl.org</a> which uses UA detection to tell you what browser to view webGL with. If there was a newer version of your browser that supported webGL, then it would link to that browser. If not, it would link to all the other browsers that support webGL.</p>
+
+<p><img src="http://cache.gyazo.com/f0a80983ca4e1a8e1cebb72a66077b33.png" alt="getWebGL messaging" /></p>
+
+<p>Instead of forcing people to choose a browser arbitrarily due to a developer&#8217;s whims and fancies, it provides you with an optimal recommendation based on your (viewer&#8217;s) defaults.</p>
+
+<p>I wanted to see if we could do so with all the other HTML5 features. This way, there would be less of &#8220;download webkit browsers now&#8221; and more smart browser recommendations based on actual feature support.</p>
+
+<p>You also won&#8217;t have to see antiquated messaging like &#8220;Download Opera 9.5&#8221; or &#8220;Download Chrome 8&#8221;, but get an up-to-date browser support information depending on the features that are requested:</p>
+
+<p><img src="http://cache.gyazo.com/f49245b9418ab7069cf754436b079ea3.png" alt="Screenshot of browser support message" /></p>
+
+<p>If a newer version of your browser supports the required features, it would ask you to view the page in that browser and not in random other browsers:</p>
+
+<p><img src="http://cache.gyazo.com/45d07becc1f74d9c9544a120821652cd.png" alt="Screenshow of newer browser message" /></p>
+
+<p>I broached the idea <a href="https://github.com/paulirish/lazyweb-requests/issues/39">here</a> and then less than a month ago, <a href="http://twitter.com/jon_neal">Jonathan Neal</a> produced a full working implementation of how such a service would look like. I worked with Jon, <a href="http://twitter.com/fyrd">Alexis Deveria</a>, <a href="http://twitter.com/paul_irish">Paul Irish</a>, <a href="http://twitter.com/drublic">Hans Christian Reinl</a>, <a href="http://twitter.com/aaronlayton">Aaron Layton</a> and <a href="https://github.com/h5bp/html5please-api/contributors">many more</a> to create what is now <a href="http://api.html5please.com">HTML5Please API</a>.</p>
+
+<p>In brief, this service looks up the data used to render <a href="http://caniuse.com">When can I use</a> tables and match it to the user&#8217;s UA. Depending on the match, and the required features, it would either tell the user that they have a browser that is missing critical features required on the page or it would get out of the way and not render anything.</p>
+
+<p>Here is how it looks like on a browser that supports all the required features:
+<img src="http://h5bp.github.com/html5please-api/site/with-support.png" alt="A page on a browser supporting Drag and Drop" /></p>
+
+<p>Here is how it looks like when a browser does not:
+<img src="http://h5bp.github.com/html5please-api/site/without-support.png" alt="A page on a browser that does not support Drag and Drop" /></p>
+
+<p>Even if the service fails to return anything (say network failure), there is no terrible disruption, the user can use the site as it is.</p>
+
+<p>Ideally, you would want to provide all critical actions on the user&#8217;s browser based on what is available. If you absolutely must need certain features to enhance the experience, you can use this service to let the user know which browsers would offer that.</p>
+
+<p><a href="http://twitter.com/simurai">Simurai</a> has some creative uses of this service in his projects <a href="http://lab.simurai.com/carveme/">Carveme</a> and <a href="http://lab.simurai.com/flashlight/">Flash Light</a>. What more, this API has even been <a href="https://github.com/gf3/protobot/blob/master/protobot.js#L447">integrated into an IRC bot</a>!</p>
+
+<p>The <a href="https://github.com/h5bp/html5please-api/wiki/">Wiki pages</a> have much more in-depth information on all the possible options you can use with this API.</p>
+
+<p>Let us know your suggestions and bug reports on the <a href="http://github.com/h5bp/html5please-api/issues/">Github Issue Tracker</a>.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[html5please]]></title>
@@ -1384,50 +1433,6 @@ Properties defined on <code>.region1-1</code> or <code>.region1-2</code> will no
 
 
 <p>The Kindle portends a future when you can carry your library with you! It is not there yet, but I think the Kindle has the right form-factor and features to make that real. If you have a few Kindle tricks up your sleeve, do write in the comments.</p>
-
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Book Reviews for October 2010]]></title>
-    <link href="http://nimbupani.github.com/book-reviews-for-october-2010.html"/>
-    <updated>2010-11-04T00:00:00-07:00</updated>
-    <id>http://nimbupani.github.com/book-reviews-for-october-2010</id>
-    <content type="html"><![CDATA[<p>October was a month of traveling and being nervous about <a href="http://nimbupani.com/active-web-development.html">my talk at Web Directions South</a>, which meant I managed to read very little. But, it was the first time I read Kindle books &mdash; Alice&rsquo;s Adventures in Wonderland and The Girl Who Kicked the Hornet&rsquo;s Nest &mdash; both on the train from Darwin to Adelaide. A review of the Kindle is pending, and hopefully I should put it out soon!</p>
-
-
-<p>Meanwhile, here are the reviews!</p>
-
-
-<h3>Alice&rsquo;s Adventures in Wonderland</h3>
-
-
-<p>I find it so annoying that most books on Kindle cost at least USD10. Luckily, there is a list of popular free books and deservedly <a href="http://www.amazon.com/gp/product/1936594064?ie=UTF8&amp;tag=nimbupani-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=1936594064">Alice&rsquo;s Adventures in Wonderland</a> is listed among the top books. I am amazed this book was popular at the time it was written. I suspect it became so because it was catalogued as a &ldquo;Children&rsquo;s book&rdquo;. It certainly is not just for kids! It is written so well, and Lewis Carroll had a very lively imagination.</p>
-
-
-<p></p>
-
-<h3>The Fourth Bear: A Nursery Crime</h3>
-
-
-<p>I loved Jasper Fforde&rsquo;s first Thursday Next novel, and <a href="http://www.amazon.com/gp/product/0670037729?ie=UTF8&amp;tag=nimbupani-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=0670037729">The Fourth Bear: A Nursery Crime</a> is adorable too! It is quite silly a story, but has lots of word play and metaphors that delight. If you love funny puns, and metaphors, you should read Jasper Fforde&rsquo;s books!</p>
-
-
-<h3>The Girl Who Kicked the Hornet&rsquo;s Nest</h3>
-
-
-<p><a href="http://www.amazon.com/gp/product/030726999X?ie=UTF8&amp;tag=nimbupani-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=030726999X">The Girl Who Kicked the Hornet&rsquo;s Nest</a> was the first (and so far the only) book I have purchased on the Kindle. I don&rsquo;t know why, but the idea of reading Steig Larsson on the train crossing the Australian desert seemed irresistable. I enjoyed reading the first two, this was no different. It all ends quite happily much to my satisfaction. I only wish he was alive to write more books!</p>
-
-
-<h3>Tailor of Panama</h3>
-
-
-<p>Moral of the story for <a href="http://www.amazon.com/gp/product/034093770X?ie=UTF8&amp;tag=nimbupani-20&amp;linkCode=as2&amp;camp=1789&amp;creative=390957&amp;creativeASIN=034093770X">The Tailor of Panama</a> is, Secret Service agents always look for an excuse for conspiracy even when there is none. It is a riveting read, mainly because most of the book rings true (especially when you read declassified information from U.S. or U.K.)</p>
-
-
-<p></p>
-
-<p>My productivity went for a toss after I discovered <a href="http://www.quora.com/Divya-Manian">Quora</a>, and especially <a href="http://www.quora.com/What-are-the-best-science-fiction-novels">this question</a>. Now I have more books to read &mdash; but that should not stop you from suggesting books you found interesting this month in the comments!</p>
 
 ]]></content>
   </entry>
